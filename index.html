@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List with Calendar and Reminder</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <nav class="navbar">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="clock.png" alt="clock Logo" width="70" height="70">
+      </a>
+    </div>
+  </nav>
+</header>
+
+  <main>
+    <section class="container">
+      <h1>To-Do List</h1>
+
+      <form id="todo-form">
+        <div class="form-group">
+          <label for="todo-input">Add a to-do item:</label>
+          <input type="text" id="todo-input" class="form-control" placeholder="Add a to-do item">
+        </div>
+        <div class="form-group">
+          <label for="reminder-input">Set a reminder:</label>
+          <input type="datetime-local" id="reminder-input" class="form-control">
+        </div>
+        <button type="submit" id="add-button" class="btn-primary">Add</button>
+      </form>
+
+      <div class="form-group">
+        <label for="filter-select">Filter:</label>
+        <select id="filter-select" class="select-control">
+          <option value="all">All</option>
+          <option value="pending">Pending</option>
+          <option value="completed">Completed</option>
+        </select>
+      </div>
+
+      <ul id="todo-list">
+        <!-- To-do items will be dynamically added here -->
+      </ul>
+
+      <div class="options">
+        <button id="print-button" class="btn-primary">Print List</button>
+        <button id="save-button" class="btn-primary">Save List</button>
+        <button id="reset-button" class="btn-primary">Reset</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
